@@ -31,6 +31,20 @@ export default function Login() {
     <input placeholder="Email" name="email" onChange={handleChange} />
     <input placeholder="Password" type="password" name="password" onChange={handleChange} />
     <button>Login</button>
+     <p style={{ marginTop: "15px" }}>
+        New organizer?{" "}
+        <span
+          onClick={() => navigate("/register")}
+          style={{
+            color: "#4f46e5",
+            cursor: "pointer",
+            fontWeight: "600"
+          }}
+        >
+          Register here
+        </span>
+      </p>
+            
   </form>
 </div>
 
