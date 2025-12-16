@@ -11,4 +11,7 @@ mongoose.connect(MONGO_URI);
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/events", require("./routes/eventRoutes"));
 app.use("/api/register", require("./routes/registrationRoutes"));
-app.listen(5000, () => console.log("Backend running on 5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
