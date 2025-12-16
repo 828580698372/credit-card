@@ -6,7 +6,10 @@ const app = express();
 app.use(express.json());
 
 
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  credentials: true
+}));
 mongoose.connect(MONGO_URI);
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/events", require("./routes/eventRoutes"));
